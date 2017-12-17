@@ -13,7 +13,7 @@ import domain.Rectangle;
     ------------------------------------------------------------------------- */
 public class Square implements IGeometricShape {
     private double sides = 4;
-    private double sideLengt;
+    private double sidelength;
 
     public double getSides() {
         return sides;
@@ -24,18 +24,22 @@ public class Square implements IGeometricShape {
     }
 
     public double getSideLengt() {
-        return sideLengt;
+        return sidelength;
     }
 
-    public void setSideLengt(double sideLengt) {
-        this.sideLengt = sideLengt;
+    public void setSideLengt(double sidelength) {
+        this.sidelength = sidelength;
     }
     
     public double area() {
-        return sideLengt * sideLengt;
+        return sidelength * sidelength;
     }
     
     public double perimeter() {
-        return sideLengt * 4;
+        return sidelength * 4;
     }  
+    
+    public Square(double sidelength) {
+        this.sidelength = sidelength;
+    }
 }

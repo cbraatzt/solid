@@ -33,7 +33,7 @@ public class Solid {
         shapes.add(new Rectangle(5, 1));
         shapes.add(new Rectangle(8, 9));
         shapes.add(new EquilateralTriangle(6));
-        shapes.add(new Square(3, 3));
+        shapes.add(new Square(3));
 
     /* -------------------------------------------------------------------------
     FIXME: SOLID: S - single responsibility principle
