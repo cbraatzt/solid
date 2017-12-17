@@ -36,6 +36,12 @@ public class Rectangle {
         this.height = heigt;
     }
     
+    /* -------------------------------------------------------------------------
+    FIXME: SOLID: S - single responsibility principle
+    Se viola el principio al declarar los métodos sumAreas y sumPerimeters en 
+    la misma clase que Rectangle ya que la sumatoria hace parte de la lógica de
+    la aplicación y no de la lógica de un rectángulo.
+   
     public static double sumAreas(ArrayList<Rectangle> rectangles) {
         double area = 0;
         for(Rectangle rectangle : rectangles) {
@@ -51,4 +57,5 @@ public class Rectangle {
         }
         return perimeter;
     }
+    ------------------------------------------------------------------------- */
 }

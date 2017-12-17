@@ -7,6 +7,8 @@ package solid;
 
 import domain.Rectangle;
 import java.util.ArrayList;
+import logic.AreaOperations;
+import logic.PerimeterOperations;
 
 /**
  *
@@ -25,9 +27,18 @@ public class Solid {
         rectangles.add(new Rectangle(5, 1));
         rectangles.add(new Rectangle(8, 9));
 
+    /* -------------------------------------------------------------------------
+    FIXME: SOLID: S - single responsibility principle
         double sumOfAreas = Rectangle.sumAreas(rectangles);
         double sumOfOPerimeters = Rectangle.sumPerimeters(rectangles);
-
+    ------------------------------------------------------------------------- */
+    
+    AreaOperations areaOperations = new AreaOperations();
+    PerimeterOperations perimeterOperations = new PerimeterOperations();
+    
+    double sumOfAreas = areaOperations.sumAreas(rectangles);
+    double sumOfOPerimeters = perimeterOperations.sumPerimeters(rectangles);
+    
         System.out.println("Área total: " + sumOfAreas + " -- Perímetro total: " + sumOfOPerimeters);
     }
 
