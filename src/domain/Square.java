@@ -5,37 +5,37 @@ import domain.Rectangle;
  *
  * @author cbraatz
  */
-public class Square extends Rectangle {
-    private double _height;
-    private double _width;
 
-    public Square(double width, double heigt) {
-        super(width, heigt);
-    }
-    
-    @Override
-    public double getHeight() {
-        return _height;
-    }
-    
-    @Override
-    public void setHeight(double height) {
-        this.height = height;
-    }
-    
-    @Override
-    public double getWidth() {
-        return _height;
+    /* -------------------------------------------------------------------------
+    FIXME: SOLID: L - liskov substitution principle
+    Se implementa la interface IGeometricShape en lugar de heredar de la clase
+    Rectangle
+    ------------------------------------------------------------------------- */
+public class Square implements IGeometricShape {
+    private double sides = 4;
+    private double sideLengt;
+
+    public double getSides() {
+        return sides;
     }
 
-    @Override
-    public void setWidth(double width) {
-        this.width = _width;
+    public void setSides(double sides) {
+        this.sides = sides;
+    }
+
+    public double getSideLengt() {
+        return sideLengt;
+    }
+
+    public void setSideLengt(double sideLengt) {
+        this.sideLengt = sideLengt;
     }
     
-    @Override
     public double area() {
-        return getHeight() * getWidth();
+        return sideLengt * sideLengt;
     }
     
+    public double perimeter() {
+        return sideLengt * 4;
+    }  
 }
