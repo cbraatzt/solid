@@ -5,6 +5,7 @@
  */
 package logic;
 
+import domain.EquilateralTriangle;
 import domain.Rectangle;
 import java.util.ArrayList;
 
@@ -19,10 +20,24 @@ import java.util.ArrayList;
 ----------------------------------------------------------------------------- */
 public class PerimeterOperations {
     
-        public double sumPerimeters(ArrayList<Rectangle> rectangles) {
+    /*
+    public double sumPerimeters(ArrayList<Rectangle> rectangles) {
         double perimeter = 0;
         for(Rectangle rectangle : rectangles) {
             perimeter += 2 * rectangle.getHeight() + 2 * rectangle.getWidth();
+        }
+        return perimeter;
+    }
+    */
+    
+    public double sumPerimeters(ArrayList<Object> shapes) {
+        double perimeter = 0;
+        for(Object shape : shapes) {
+            if (shape instanceof Rectangle) {
+                perimeter += 2 * ((Rectangle) shape).getHeight() + 2 * ((Rectangle) shape).getWidth();
+            } else if (shape instanceof EquilateralTriangle) {
+                perimeter += 2 * ((EquilateralTriangle) shape).getSidelength() * 3;
+            }
         }
         return perimeter;
     }
