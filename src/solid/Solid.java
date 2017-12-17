@@ -5,6 +5,9 @@
  */
 package solid;
 
+import domain.Rectangle;
+import java.util.ArrayList;
+
 /**
  *
  * @author cbraatz
@@ -15,8 +18,17 @@ public class Solid {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Hello World");
+
+        ArrayList<Rectangle> rectangles = new ArrayList<>();
+        rectangles.add(new Rectangle(10, 5));
+        rectangles.add(new Rectangle(4, 6));
+        rectangles.add(new Rectangle(5, 1));
+        rectangles.add(new Rectangle(8, 9));
+
+        double sumOfAreas = Rectangle.sumAreas(rectangles);
+        double sumOfOPerimeters = Rectangle.sumPerimeters(rectangles);
+
+        System.out.println("Área total: " + sumOfAreas + " -- Perímetro total: " + sumOfOPerimeters);
     }
-    
+
 }
