@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package domain;
 
+import domain.IGeometricShape;
 /**
  *
  * @author cbraatz
  */
-public class EquilateralTriangle {    
+public class EquilateralTriangle implements IGeometricShape {    
     public double sides = 3;
     public double sidelength;
 
@@ -29,4 +25,15 @@ public class EquilateralTriangle {
         this.sidelength = sidelength;
     }
     
+    /* -------------------------------------------------------------------------
+    FIXME: SOLID: O - open closed principle
+    Se implementan los métodos de la interface de acuerdo a la figura.
+    ------------------------------------------------------------------------- */
+    public double area() {
+        return Math.sqrt(3) * Math.pow(sidelength, 2) / 4;
+    }
+    
+    public double perimeter() {
+        return sidelength * 3;
+    }
 }

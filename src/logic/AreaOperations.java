@@ -2,6 +2,7 @@ package logic;
 
 import static com.sun.org.apache.xerces.internal.util.FeatureState.is;
 import domain.EquilateralTriangle;
+import domain.IGeometricShape;
 import domain.Rectangle;
 import java.util.ArrayList;
 
@@ -25,6 +26,14 @@ public class AreaOperations {
         return area;
     }
      */
+    
+   /* -------------------------------------------------------------------------
+    FIXME: SOLID: O - open closed principle
+    Se actualiza el método pra sumar las áreas de forma que se reciban objetos
+    de tipo de la interface IGeometricShape.
+    ------------------------------------------------------------------------- */
+    
+    /*
     public double sumAreas(ArrayList<Object> shapes) {
         double area = 0;
         for (Object shape : shapes) {
@@ -36,5 +45,14 @@ public class AreaOperations {
         }
         return area;
     }
+*/
+    
+    public double sumAreas(ArrayList<IGeometricShape> shapes) {
+        double area = 0;
+        for(IGeometricShape shape : shapes) {
+            area += shape.area();
+        }
+        return area;
+    }    
 
 }

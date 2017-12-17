@@ -6,7 +6,7 @@ import java.util.ArrayList;
  *
  * @author cbraatz
  */
-public class Rectangle {
+public class Rectangle implements IGeometricShape {
     public double sides = 4;
     public double height;
     public double width;
@@ -58,4 +58,16 @@ public class Rectangle {
         return perimeter;
     }
     ------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------
+    FIXME: SOLID: O - open closed principle
+    Se implementan los métodos de la interface de acuerdo a la figura.
+    ------------------------------------------------------------------------- */
+    public double area() {
+        return height * width;
+    }
+    
+    public double perimeter() {
+        return height * 2 + width * 2;
+    }
 }

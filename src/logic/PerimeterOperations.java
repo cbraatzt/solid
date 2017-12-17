@@ -6,6 +6,7 @@
 package logic;
 
 import domain.EquilateralTriangle;
+import domain.IGeometricShape;
 import domain.Rectangle;
 import java.util.ArrayList;
 
@@ -29,7 +30,14 @@ public class PerimeterOperations {
         return perimeter;
     }
     */
+
+   /* -------------------------------------------------------------------------
+    FIXME: SOLID: O - open closed principle
+    Se actualiza el método pra sumar las áreas de forma que se reciban objetos
+    de tipo de la interface IGeometricShape.
+    ------------------------------------------------------------------------- */    
     
+    /*
     public double sumPerimeters(ArrayList<Object> shapes) {
         double perimeter = 0;
         for(Object shape : shapes) {
@@ -41,5 +49,13 @@ public class PerimeterOperations {
         }
         return perimeter;
     }
-    
+    */
+
+    public double sumPerimeters(ArrayList<IGeometricShape> shapes) {
+        double perimeter = 0;
+        for(IGeometricShape shape : shapes) {
+            perimeter += 2 * shape.perimeter();
+        }
+        return perimeter;    
+    }
 }

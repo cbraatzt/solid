@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package solid;
 
 import domain.EquilateralTriangle;
+import domain.IGeometricShape;
 import domain.Rectangle;
 import java.util.ArrayList;
 import logic.AreaOperations;
@@ -30,7 +26,7 @@ public class Solid {
         rectangles.add(new Rectangle(8, 9));
         */
         
-        ArrayList<Object> shapes = new ArrayList<>();
+        ArrayList<IGeometricShape> shapes = new ArrayList<>();
         shapes.add(new Rectangle(10, 5));
         shapes.add(new Rectangle(4, 6));
         shapes.add(new Rectangle(5, 1));
